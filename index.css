@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-    backdrop-filter: blur(10px);
+    background-color: #00000048;
     transition: all 0.3s ease;
 }
 
