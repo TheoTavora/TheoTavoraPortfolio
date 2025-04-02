@@ -1,0 +1,6 @@
+# Ignorar node_modules e build
+node_modules/
+dist/
+
+# Ignorar arquivos de configuração sensíveis
+.env
