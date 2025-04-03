@@ -15,7 +15,6 @@ body {
 }
 
 .navbar {
-    background-color: #00000048;
     transition: all 0.3s ease;
 }
 
@@ -99,7 +98,7 @@ body {
 }
 
 .icon img {
-    flex-shrink: 1;
+    object-fit: contain;
 }
 
 .form-col {
@@ -352,12 +351,17 @@ footer {
 }
 
 @media (max-width: 575.98px) {
+    .presentation-col {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
     .presentation-col h1 {
         font-size: 2rem;
     }
 
     .presentation-col h4 {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
     }
 
     .form-col{
@@ -366,7 +370,7 @@ footer {
 
     .paragrafo-sobremim {
         text-align: center;
-        font-size: 0.85rem;
+        font-size: 1rem;
         padding: 0 !important;
     }
 

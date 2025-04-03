@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Portfólio - Théo Tavora</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" onclick="trocaNavbarCor()">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -41,7 +41,7 @@
             <h1>Experiencie as possibilidades!</h1>
             <h4>
                 Eu sou o Théo Tavora, desenvolvedor Full Stack com experiência em Bootstrap (HTML5+CSS3), PHP e Flutter. 
-                Além dessas habilidades técnicas, eu sei que sou capaz de transformar o que você imagina pro seu negócio, em algo real!<br />Sei que posso te ajudar a tirar
+                Além dessas habilidades técnicas, eu sei que sou capaz de transformar o que você imagina para o seu negócio, em algo real!<br />Sei que posso te ajudar a tirar
                 aquela ideia do papel...<br />
             </h4>
             <div class="icon">
@@ -166,8 +166,9 @@
 
                         📌 Tecnologias: PHP | JavaScript | Flutter | Bootstrap | MySQL<br />
                         📌 Interesses: Desenvolvimento Full Stack | UX/UI | Aplicações Escaláveis | Mobile Development<br /><br />
+                        <a href="#" class="contact-me text-center">Contate-me! -></a>
                     </p>
-                    <a href="#" class="contact-me text-center">Contate-me! -></a>
+                    
             </div>
         </div>
     </section>
@@ -301,6 +302,22 @@
     }
 
     document.addEventListener('DOMContentLoaded', mudarClasseNavbar);
+
+    function trocaNavbarCor() {
+        const navbar = document.querySelector(".navbar");
+        const navbarCollapse = document.querySelector("#navbarNav");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const brand = document.querySelector(".navbar-brand");
+
+        setTimeout(() => {
+            const isOpen = navbarCollapse.classList.contains("show");
+
+            navbar.style.backgroundColor = isOpen ? "white" : "";
+            navbar.style.transition = "background-color 0.3s ease-in-out";
+
+            navLinks.forEach(link => link.style.color = isOpen ? "black" : "");
+            brand.style.color = isOpen ? "black" : "";
+        }, 5)};
 
     </script>
 
