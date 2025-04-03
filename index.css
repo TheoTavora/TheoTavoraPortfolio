@@ -351,6 +351,16 @@ footer {
 }
 
 @media (max-width: 575.98px) {
+
+    .navbar {
+        background-color: white;
+    }
+
+        .navbar li,
+        .navbar a {
+        color: #000000; 
+    }
+
     .presentation-col {
         padding-right: 20px;
         padding-left: 20px;
